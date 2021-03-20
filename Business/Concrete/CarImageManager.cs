@@ -95,6 +95,11 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carImageDal.GetImageDetails(), Messages.Listed);
         }
+
+        public DataResult<List<CarDetailDto>> GetImagesDetailById(int carId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carImageDal.GetImageDetails(c => c.Id == carId), Messages.Listed);
+        }
     }
 }
 

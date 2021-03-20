@@ -27,5 +27,8 @@ namespace Business.Constants
         public static string AuthorizationDenied = "Yetkiniz yok";
         public static string CarNameAlreadyExists = "Araç ismi kayıtlarda var";
         public static string UserUpdated = "Kullanıcı güncellendi";
+        public static string InsufficientBalance = "Yetersiz bakiye";
+
+        public static string PaymentCompleted = "Ödeme gerçekleşti";
     }
 }

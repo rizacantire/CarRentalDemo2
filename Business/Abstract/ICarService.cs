@@ -17,10 +17,12 @@ namespace Business.Abstract
 
         IDataResult<List<Car>> GetByUnitPrice(decimal min, decimal max);
         IDataResult<List<CarDetailDto>> GetCarDetails();
+        IDataResult<List<CarDetailDto>> GetCarsByCarId(int carId);
         IDataResult<List<CarDetailDto>> GetCarsDetailsByBrand(int brandId); 
          IDataResult<List<CarDetailDto>> GetCarDetailsBrand(int brandId);
         IDataResult<List<CarDetailDto>> GetCarsDetailsByColor(int colorId);
-        IDataResult<List<Car>> GetCarsByBrandId(int brandId); 
+        IDataResult<List<CarDetailDto>> GetCarsDetailByBrandIdAndColorId(int brandId,int colorId); 
+         IDataResult<List<Car>> GetCarsByBrandId(int brandId); 
         IDataResult<List<Car>> GetById(int carId);
 
         IResult AddTransactional(Car car);

@@ -16,7 +16,8 @@ namespace Business.Abstract
         IResult Update([FromForm(Name = "file")] IFormFile file, [FromForm] CarImage carImage);
         IDataResult<List<CarImage>> GetAll();
         IDataResult<List<CarDetailDto>> GetImagesByDetail();
-        
+        DataResult<List<CarDetailDto>> GetImagesDetailById(int carId);
+
 
     }
 }
